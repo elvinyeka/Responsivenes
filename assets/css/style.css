@@ -1,0 +1,228 @@
+@font-face {
+    font-family: RoadTest;
+    src: url(../fonts/RoadTest/RoadTest.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+p {
+    font-size: 93%;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+/* header section  */
+.height {
+    height: auto;
+    width: 15px;
+}
+.header {
+    background-image: url(../images/world.webp) ;
+    background-color: #e9e9e9;
+    padding: 40px 0;
+}
+.main_header {
+   max-width: 1200px;
+   margin: 0 auto;  
+   padding: 0 20px;   
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 400;
+    color: darkslategray;
+    font-family: RoadTest;
+}
+
+/* navbar starts  */
+#hamburger, header label {
+    display: none;
+}
+ header nav,  header .left_menu{
+     background-color: #1e4846;
+ }
+ 
+ .menuitem ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     display: flex;
+     justify-content: center;
+ } 
+ .menuitem {
+     z-index: 100;
+ }
+
+
+ .menuitem li:hover {
+     background-color: rgba(0, 0, 0, 0.3);
+ }
+ .menuitem li a{
+     display: block;
+     padding: 15px 15px;
+     color: #fff;
+     text-decoration: none;
+     text-transform: uppercase ;
+     font-size: 16px;
+ }
+ /* navbar ends  */
+
+ /* body section starts  */
+ .body_content {
+     padding: 30px 0;
+ }
+ .banner {
+     text-align: center;
+     width: 100%;
+     height: 400px;
+     position: relative;
+     overflow: hidden;
+ }
+ .text_banner {
+     position: absolute;
+     color: aliceblue;
+     background-color: rgba(0, 0, 0, 0.3);
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     padding: 30px 20px;
+ }
+
+ /* news list  */
+ .news_list {
+     padding: 20px 0;
+     display: flex;
+     flex-wrap: nowrap;
+ }
+ .first-news {
+     padding: 5px;
+ }
+
+ /* secondary news  */
+ .text-columns {
+     display: flex;
+ }
+ .main {
+     width: 60%;
+ }
+
+ .right-side {
+     display: flex;
+     flex-direction: column;
+    width: 40% ;
+ }
+
+ .first-box{
+     background-color: #007965;
+     padding: 10px;
+     margin-bottom: 8px;
+     font-size: 13px;
+     color: aliceblue;
+ }
+ .second-box{
+    background-color: #eb5e0b;
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: aliceblue;
+ }
+ .third-box{
+    background-color: #91091e;
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: aliceblue;
+ }
+
+ /* footer  */
+ footer {
+     background-color: darkslategray;
+     color: aliceblue;
+     padding: 15px 0;
+     text-align: center;
+ }
+ .footer_copy .fa-heart{
+     color: red;
+ }
+ .footer_copy a {
+     color: #FF3D00;
+     font-size: 16px;
+     padding-left: 5px;
+     text-decoration: none;
+     border: none;
+     font-weight: 900;
+ }
+ .footer_copy a:hover {
+     color: #E64A19;
+ }
+
+ /* Media  */
+header label:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media all and (max-width: 768px) {
+    header label {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-right: 1px solid #3f3f3f;
+        padding: 10px;
+    }
+    img {
+        height: auto;
+    }
+    .menu {
+        position: absolute;
+        width: 200px;   
+        margin-left: -200px;
+        transition: all 0.5s;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    #hamburger:checked~ .menu{
+        margin-left: 0;
+    }
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    .menu li a {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+    .hide_in_mobile_view {
+        display: none;
+    }
+    .mobile-view {
+        width: auto;
+        margin: 0 auto;
+    }
+    .news_list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .text-columns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:500px) {
+    .mobile-view {
+        width: auto;
+        margin: 0 auto;
+    }
+}
